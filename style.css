@@ -2,6 +2,15 @@ body{
     background-color: black;
     color: white;
 }
+
+@media (max-width: 768px) { /* 根据需求选择适当的断点 */
+    .title {
+      width: 45%; /* 或者更适应移动设备的宽度 */
+      left: initial; /* 取消原有的left定位 */
+      transform: none; /* 取消translateX，让其自然居中 */
+    }
+  }
+
 .title{
     position: absolute;
     width: 50%;
