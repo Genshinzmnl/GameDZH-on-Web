@@ -3,6 +3,10 @@ body{
     color: white;
 }
 
+.OnTheGame{
+    margin-bottom: 1.6cm;
+}
+
 .title{
     position: absolute;
     width: 50%;
@@ -11,12 +15,17 @@ body{
     transform: translateX(50%);
 }
 
+.ltsj666{
+    height: 100%;
+}
+
 .TopS{
     position: relative;
     display: flex;
     flex-wrap: nowrap;
     backdrop-filter: blur(8px);
     background-color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1.614%;
 }
 
 .TopS>.TextMap{
@@ -73,6 +82,7 @@ body{
     display: flex;
     align-items: center; /* Flexbox布局，同时确保高度足够 */
     justify-content: center; /* 水平居中 */
+    margin-bottom: 1%;
 }
 
 .ddy{
@@ -94,7 +104,7 @@ a:hover{
     color: #66CCFF;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .title {
       width: 100%; /* 或者更适应移动设备的宽度 */
       left: initial; /* 取消原有的left定位 */
