@@ -25,7 +25,22 @@ body{
     margin: 0 auto;
     transform: translateX(50%);
     bottom: 3px/* 设置一个安全距离，确保不会覆盖到下方元素 */;
+    background-size: cover;
+    opacity: 0;
+    animation: TitleFly 1s ease forwards;
 }
+
+@keyframes TitleFly {
+    from {
+      transform: translateX(-100%);
+      transform: translateY(-250%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(50%);
+      opacity: 1;
+    }
+  }
 
 .ltsj666{
     height: 100%;
@@ -105,6 +120,8 @@ body{
     padding: 18px;
     text-decoration: none;
     font-size: 25px;
+    position: relative;
+    left: -45px; /* 向左偏移2像素 */
 }
 
 .gjs{
