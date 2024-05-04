@@ -1,18 +1,30 @@
 body{
     background-color: black;
     color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.OnTheGame{
-    margin-bottom: 1.6cm;
-}
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 除了页脚外的所有内容 */
+  .container-content {
+    flex: 1;
+    /* 添加必要的填充或边距 */
+  }
+  
 
 .title{
-    position: absolute;
     width: 50%;
     left: 0;
     margin: 0 auto;
     transform: translateX(50%);
+    bottom: 3px/* 设置一个安全距离，确保不会覆盖到下方元素 */;
 }
 
 .ltsj666{
@@ -66,12 +78,15 @@ body{
 }
 
 .footer{
-    background-color: hsl(0, 5%, 34%);
+    background-color: #16171b;
     bottom: 0;
-    color: rgba(0, 0, 0, 0.767);
+    color: rgb(255, 255, 255);
     font-size:50%;
     padding: 10px;
     text-align: center;
+    /* 页脚样式 */
+    width: 100%;
+    padding: 20px 0;
 }
 
 .tyl{
@@ -82,7 +97,6 @@ body{
     display: flex;
     align-items: center; /* Flexbox布局，同时确保高度足够 */
     justify-content: center; /* 水平居中 */
-    margin-bottom: 1%;
 }
 
 .ddy{
@@ -92,6 +106,15 @@ body{
     text-decoration: none;
     font-size: 25px;
 }
+
+.gjs{
+    border-radius: 500px;
+    background: #f6d126;
+    padding: 18px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
 a:link{
     color: #66CCFF;
 }
@@ -116,3 +139,10 @@ a:hover{
         font-size: 135%;
     }
   }
+
+  .ltsj666 {
+    height: calc(100vh - 100px); /* 假设导航栏和页脚总高度为100px */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 让内容垂直居中，如果不需居中可以删除这两行 */
+}
