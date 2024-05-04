@@ -155,6 +155,17 @@ a:hover{
         color: white;
         font-size: 135%;
     }
+    @keyframes TitleFly {
+        from {
+          transform: translateX(-100%);
+          transform: translateY(-250%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
   }
 
   .ltsj666 {
