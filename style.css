@@ -126,7 +126,6 @@ body{
     text-decoration: none;
     font-size: 25px;
     position: relative;
-    left: -45px; /* 向左偏移2像素 */
 }
 
 .gjs{
@@ -135,6 +134,7 @@ body{
     padding: 18px;
     text-decoration: none;
     font-size: 25px;
+    position: relative;
 }
 
 a:link{
