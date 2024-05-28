@@ -58,7 +58,7 @@ body{
 .TopS>.TextMap{
     writing-mode: horizontal-tb;
     margin-left: 20%;
-    font-family: 'DyhFont',sans-serif;
+    font-family: 'SmileySans',sans-serif;
     font-size: 180%;
 }
 
@@ -86,22 +86,16 @@ body{
 }
 
 @font-face {
-<<<<<<< HEAD
-    font-family: 
-    'SmileySans'
-    'Arial', /* 无衬线字体，Windows上非常常见 */
-    'Helvetica', /* 另一种广泛使用的无衬线字体，MacOS偏好 */
-    'Verdana', /* 清晰易读的无衬线字体，适合小字号 */
-    'sans-serif'; /* 如果以上都不可用，则使用系统默认的无衬线字体 */;
-    src: url('https://genshinzmnl.github.io/GameDZH-on-Web/font/SmileySans-Oblique.otf') format('opentype'), /* 新增OTF格式 */
-         url('https://genshinzmnl.github.io/GameDZH-on-Web/font/dyh.ttf.woff2') format('woff2'), /* 保留WOFF2格式 */
-         url('https://genshinzmnl.github.io/GameDZH-on-Web/font/dyh.ttf') format('truetype'); /* 保留TTF格式作为额外备选 */
-=======
-    font-family: DyhFont;
-    src: url(/font/dyh.ttf.woff2);
->>>>>>> parent of 2a9103a (1)
+    font-family: 'SmileySans-Oblique';
+    src: 
+        url('font/SmileySans-Oblique.otf') format('opentype'),
+        url('font/SmileySans-Oblique.woff2') format('woff2'),
+        url('font/SmileySans-Oblique.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
+
+    /* 通用字体系列正确放置在最后，不过通常'Oblique'或'Italic'会对应斜体，这里保持原始指定 */
+    font-family: 'SmileySans-Oblique', 'Arial', 'Helvetica', 'Verdana', sans-serif;
 }
 
 .footer{
