@@ -4,5 +4,3 @@ window.onload = function() {
     
     titleImage.style.backgroundImage = "url('" + imgSrc + "')";
   };
-
-  

@@ -8,14 +8,16 @@ body{
 
 .container {
     min-height: 100%;
-    display: -ms-grid; /* IE Flexbox fallback */
     display: flex;
     flex-direction: column;
-}
-
-.container-content {
+  }
+  
+  /* 除了页脚外的所有内容 */
+  .container-content {
     flex: 1;
-}
+    /* 添加必要的填充或边距 */
+  }
+  
 
 .title{
     width: 50%;
@@ -23,7 +25,7 @@ body{
     margin: 0 auto;
     
     transform: translateX(50%);
-    bottom: 3px;
+    bottom: 3px/* 设置一个安全距离，确保不会覆盖到下方元素 */;
     background-size: cover;
     opacity: 0;
     animation: TitleFly 1s ease forwards;
@@ -31,6 +33,7 @@ body{
 
 @keyframes TitleFly {
     from {
+      transform: translateX(-100%);
       transform: translateY(-250%);
       opacity: 0;
     }
@@ -38,25 +41,19 @@ body{
       transform: translateX(50%);
       opacity: 1;
     }
-}
+  }
 
 .ltsj666{
-    height: calc(100vh - 100px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
 }
 
 .TopS{
-    position: fixed;
-    display: -ms-flexbox; /* IE Flexbox fallback */
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
-    backdrop-filter: blur(8px); /* 考虑非支持浏览器的替代方案 */
+    backdrop-filter: blur(8px);
     background-color: rgba(255, 255, 255, 0.6);
-    width: 100%;
-    z-index: 100;
-    top: 0;
+    margin-bottom: 1.614%;
 }
 
 .TopS>.TextMap{
@@ -64,7 +61,6 @@ body{
     margin-left: 20%;
     font-family: 'DyhFont',sans-serif;
     font-size: 180%;
-    position: relative;
 }
 
 .TopS>.TextMap>.mian{
@@ -78,11 +74,12 @@ body{
     content: "";
     display: block;
     position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     height: 1.2px;
     background-color: white;
-    bottom: -1.2px;
-    left: 0;
 }
 
 .icon>img{
@@ -90,6 +87,7 @@ body{
 }
 
 @font-face {
+<<<<<<< HEAD
     font-family: 
     'SmileySans'
     'Arial', 
@@ -99,10 +97,13 @@ body{
     src: url('https://genshinzmnl.github.io/GameDZH-on-Web/font/SmileySans-Oblique.otf') format('opentype'), /* 新增OTF格式 */
          url('https://genshinzmnl.github.io/GameDZH-on-Web/font/dyh.ttf.woff2') format('woff2'), /* 保留WOFF2格式 */
          url('https://genshinzmnl.github.io/GameDZH-on-Web/font/dyh.ttf') format('truetype'); /* 保留TTF格式作为额外备选 */
+=======
+    font-family: DyhFont;
+    src: url(/font/dyh.ttf.woff2);
+>>>>>>> parent of 2a9103a (1)
     font-weight: normal;
-    font-style: oblique; /* 或normal，根据字体的实际样式 */
+    font-style: normal;
 }
-
 
 .footer{
     background-color: #16171b;
@@ -117,6 +118,12 @@ body{
 
 .tyl{
     color: #66ccff;
+}
+
+.cpdd123{
+    display: flex;
+    align-items: center; /* Flexbox布局，同时确保高度足够 */
+    justify-content: center; /* 水平居中 */
 }
 
 .ddy{
@@ -174,7 +181,7 @@ a:hover{
   }
 
   .ltsj666 {
-    height: calc(95vh - 90px); /* 假设导航栏和页脚总高度为100px */
+    height: calc(100vh - 100px); /* 假设导航栏和页脚总高度为100px */
     display: flex;
     justify-content: center;
     align-items: center; /* 让内容垂直居中，如果不需居中可以删除这两行 */
