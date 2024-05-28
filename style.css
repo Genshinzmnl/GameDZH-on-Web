@@ -17,7 +17,10 @@ body{
     flex: 1;
     /* 添加必要的填充或边距 */
   }
-  
+
+  h1{
+    color: black;
+  }
 
 .title{
     width: 50%;
@@ -47,12 +50,15 @@ body{
 }
 
 .TopS{
-    position: relative;
+    position: fixed; /* 修改为fixed，以使其固定在顶部 */
+    top: 0; /* 添加此行以确保元素位于顶部 */
     display: flex;
     flex-wrap: nowrap;
     backdrop-filter: blur(8px);
     background-color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 1.614%;
+    width: 100%; /* 添加此行以确保元素横跨全宽，可根据需要调整 */
+    z-index: 1000; /* 可选，增加z-index以确保元素在页面的最上层 */
+    margin-bottom: 1.614%; /* 注意：由于元素已固定，此margin可能不再适用或表现不同 */
 }
 
 .TopS>.TextMap{
@@ -152,14 +158,13 @@ a:hover{
 
 @media (max-width: 720px) {
     .title {
-      width: 100%; /* 或者更适应移动设备的宽度 */
-      left: initial; /* 取消原有的left定位 */
+      width: 98%; /* 或者更适应移动设备的宽度 */
       transform: translateY(0.618px);
     }
     .TopS>.TextMap>.mian{
         text-decoration: none;
         color: white;
-        font-size: 135%;
+        font-size: 100%;
     }
     @keyframes TitleFly {
         from {
@@ -172,6 +177,9 @@ a:hover{
           opacity: 1;
         }
       }
+      .TopS>.TextMap{
+        margin-left: 15%;
+    }
   }
 
   .ltsj666 {
